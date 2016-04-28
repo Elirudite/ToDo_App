@@ -1,0 +1,13 @@
+<div class="col-md-12">
+	<div class="well">
+		<h3>
+			<strong><%= link_to task.description, task, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></strong>
+		</h3>
+		<p>
+			Deadline: <%= task.deadline %>
+			<%= link_to edit_task_path(task), remote: true do %>
+			<button><i class="fa fa-pencil-square" aria-hiden="true"> Edit </i> </button>
+			<% end %>
+		</p>
+	</div>
+</div>
